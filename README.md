@@ -4,7 +4,8 @@
 
 Become a patron to access over 300 LLM projects that you can download and use, plus my 1000x Cursor Course with 26 chapters and over 16 hours of content teaching how to code better with Cursor. [Support us on Patreon](https://www.patreon.com/c/echohive42).
 
-[![AI Component Builder Preview](https://img.youtube.com/vi/vJ9KW-fBkT8/0.jpg)](https://youtu.be/vJ9KW-fBkT8){:target="_blank"}
+[![AI Component Builder Preview](https://img.youtube.com/vi/vJ9KW-fBkT8/0.jpg)](https://youtu.be/vJ9KW-fBkT8)
+
 
 ## Overview
 
@@ -60,5 +61,8 @@ The server uses the Claude model to generate or modify components based on user 
 4. **Layer Management**:
    - Use the control icons to move components forward or backward in the layer stack.
 
-This application provides a powerful and intuitive way to create and modify UI components using AI, making it easier for developers to build responsive and well-structured interfaces.
+### Playing the Video
 
+You can play the video directly by clicking on the thumbnail image or the play button icon. Both links will open the video in the same tab.
+
+This application provides a powerful and intuitive way to create and modify UI components using AI, making it easier for developers to build responsive and well-structured interfaces.
