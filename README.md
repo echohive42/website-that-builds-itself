@@ -1,4 +1,4 @@
-# AI Component Builder
+# Website that builds itself with the new 3.5 Sonnet
 
 ## Support Us on Patreon
 
