@@ -72,8 +72,8 @@ To run the AI Component Builder from GitHub, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/ai-component-builder.git
-   cd ai-component-builder
+   git clone https://github.com/echohive42/website-that-builds-itself.git
+   cd website-that-builds-itself
    ```
 
 2. **Install Dependencies**:
