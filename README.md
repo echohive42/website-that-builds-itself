@@ -6,6 +6,7 @@ Become a patron to access over 300 LLM projects that you can download and use, p
 
 [![AI Component Builder Preview](https://img.youtube.com/vi/vJ9KW-fBkT8/0.jpg)](https://youtu.be/vJ9KW-fBkT8)
 
+You can play the video directly by clicking on the thumbnail image. This will open the video in the same tab.
 
 ## Overview
 
