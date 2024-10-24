@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Component Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        // Enable dark mode by default
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        }
+    </script>
+    <style>
+        .component-wrapper {
+            cursor: move;
+            user-select: none;
+        }
+        
+        .input-wrapper {
+            position: absolute;
+            width: 300px; /* Smaller width */
+            transform: translate(-50%, -50%);
+        }
+
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+            background-size: 300% 300%;
+            padding: 1px;
+            border-radius: 12px;
+        }
+
+        .loading .gradient-border {
+            animation: gradient 2s linear infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .textarea-container textarea {
+            min-height: 48px;
+            max-height: 150px;
+        }
+
+        /* Hide scrollbar but keep functionality */
+        .textarea-container textarea::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .textarea-container textarea {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Loading Animation Styles */
+        .loading-overlay {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(4px);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            min-width: 200px;
+        }
+
+        .loading-overlay.active {
+            display: flex;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            position: relative;
+            margin: 0 auto 12px;
+        }
+
+        .loading-spinner div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-top-color: #3b82f6;
+            border-radius: 50%;
+            animation: spinnerOne 1.2s linear infinite;
+        }
+
+        .loading-spinner div:nth-child(2) {
+            border: 4px solid transparent;
+            border-bottom-color: #3b82f6;
+            animation: spinnerTwo 1.2s linear infinite;
+        }
+
+        .loading-text {
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .loading-dots::after {
+            content: '';
+            animation: dots 1.4s linear infinite;
+        }
+
+        @keyframes spinnerOne {
+            0% { transform: rotate(0deg); border-width: 4px; }
+            50% { transform: rotate(180deg); border-width: 1px; }
+            100% { transform: rotate(360deg); border-width: 4px; }
+        }
+
+        @keyframes spinnerTwo {
+            0% { transform: rotate(0deg); border-width: 1px; }
+            50% { transform: rotate(180deg); border-width: 4px; }
+            100% { transform: rotate(360deg); border-width: 1px; }
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60% { content: '...'; }
+            80%, 100% { content: ''; }
+        }
+
+        /* Microphone Animation */
+        #micButton.recording i {
+            color: #ef4444 !important;
+            animation: pulse 1.5s ease infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="dark:bg-gray-900 min-h-screen">
+    <div id="canvas" class="relative min-h-screen p-4">
+        <!-- Components will be added here -->
+    </div>
+
+    <!-- Minimal Input Box -->
+    <div id="inputModal" class="hidden input-wrapper">
+        <div class="gradient-border">
+            <div class="bg-white dark:bg-gray-800 rounded-[11px]">
+                <div class="textarea-container relative">
+                    <textarea 
+                        id="componentPrompt" 
+                        class="w-full p-3 pr-28 rounded-[11px] bg-transparent dark:text-white text-gray-900 border-0 focus:ring-0 focus:outline-none resize-none transition-all duration-300"
+                        placeholder="Describe component... "
+                        rows="1"
+                        style="max-height: 200px; overflow-y: auto;"
+                    ></textarea>
+                    <div class="absolute right-2 top-1/2 -translate-y-1/2 flex gap-2">
+                        <button 
+                            id="clearButton"
+                            class="p-2 rounded-full hover:bg-gray-700/50 transition-colors duration-200 opacity-0 transition-opacity"
+                            style="display: none;"
+                        >
+                            <i class="fas fa-times text-gray-400 hover:text-red-500"></i>
+                        </button>
+                        <button 
+                            id="sendButton"
+                            class="p-2 rounded-full hover:bg-gray-700/50 transition-colors duration-200"
+                        >
+                            <i class="fas fa-paper-plane text-gray-400 hover:text-blue-500"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

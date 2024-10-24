@@ -1,0 +1,4 @@
+fastapi
+jinja2
+uvicorn
+anthropic
