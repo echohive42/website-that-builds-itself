@@ -1,10 +1,10 @@
 # AI Component Builder
 
-## Support me on Patreon
+## Support Us on Patreon
 
 Become a patron to access over 300 LLM projects that you can download and use, plus my 1000x Cursor Course with 26 chapters and over 16 hours of content teaching how to code better with Cursor. [Support us on Patreon](https://www.patreon.com/c/echohive42).
 
-[![AI Component Builder Preview](https://img.youtube.com/vi/vJ9KW-fBkT8/0.jpg)](https://www.youtube.com/embed/vJ9KW-fBkT8?autoplay=1)
+[![AI Component Builder Preview](video_website_that_makes_itself.mp4)](video_website_that_makes_itself.mp4)
 
 ## Overview
 
