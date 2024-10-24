@@ -4,6 +4,8 @@
 
 Become a patron to access over 300 LLM projects that you can download and use, plus my 1000x Cursor Course with 26 chapters and over 16 hours of content teaching how to code better with Cursor. [Support us on Patreon](https://www.patreon.com/c/echohive42).
 
+[![AI Component Builder Preview](https://img.youtube.com/vi/vJ9KW-fBkT8/0.jpg)](https://youtu.be/vJ9KW-fBkT8)
+
 ## Overview
 
 The AI Component Builder is a web application that allows users to generate and modify UI components using AI. The application leverages the power of the Claude model to create responsive and well-structured components based on user prompts.
