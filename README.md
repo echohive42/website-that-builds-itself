@@ -66,4 +66,29 @@ The server uses the Claude model to generate or modify components based on user 
 
 You can play the video directly by clicking on the thumbnail image or the play button icon. Both links will open the video in the same tab.
 
+### Running the Application from GitHub
+
+To run the AI Component Builder from GitHub, follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/ai-component-builder.git
+   cd ai-component-builder
+   ```
+
+2. **Install Dependencies**:
+   Make sure you have Python and pip installed. Then, install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Server**:
+   Navigate to the directory containing `main.py` and run the server using the command specified in `main.py`:
+   ```bash
+   python main.py
+   ```
+
+4. **Access the Application**:
+   Open your web browser and go to `http://localhost:8000` to start using the AI Component Builder.
+
 This application provides a powerful and intuitive way to create and modify UI components using AI, making it easier for developers to build responsive and well-structured interfaces.
